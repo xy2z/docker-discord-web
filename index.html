@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Docker on Discord - Join Now</title>
+
+		<meta name="description" content="Statistics and recommended articles for docker - Join our Discord server" />
+		<meta property="og:title" content="Discord server for Docker" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content="Docker on Discord" />
+		<meta property="og:description" content="Statistics and recommended articles for Docker - Join our Discord server" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://docker.xy2z.io" />
+		<meta name="twitter:title" content="Docker on Discord" />
+		<meta name="twitter:description" content="Statistics and recommended articles for docker - Join our Discord server" />
+		<meta name="twitter:card" content="summary" />
+
+		<style>
+			body {
+				font-family: Verdana, Arial, sans-serif;
+				background: #f9f9f9;
+				color: #444;
+				color: #468;
+				text-align: center;
+				width: 800px;
+				margin: 0 auto;
+				line-height: 1.8em;
+			}
+
+			header {
+				display: block;
+				margin: 80px 0;
+			}
+
+			h1 {
+				font-size: 50px;
+				margin: 0 0 0.5em;
+				letter-spacing: -0.07em;
+			}
+
+			h2 {
+				margin: 0 0 1em;
+				color: #246;
+			}
+
+			h3 {
+				font-size: 1em;
+				margin: 2em 0 0.5em;
+			}
+
+			a.button {
+				background: #007bff;
+				color: #fff;
+				border-radius: 2px;
+				padding: 1em 1.6em;
+				text-decoration: none;
+			}
+
+			a {
+				color: #26d;
+			}
+
+			a.button:hover {
+				background: #06e;
+			}
+
+
+			ul.center {
+				margin: 0;
+				text-align: center;
+				list-style: inside;
+				padding-inline-start: 0;
+				list-style-type: none;
+			}
+
+			footer {
+				font-size: 0.8em;
+				margin-bottom: 5em;
+			}
+
+			hr {
+				background: #ccc;
+				height: 1px;
+				border: 0;
+				margin: 4em 0;
+				margin: 4em 0;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1>Docker on Discord</h1>
+			<p>Welcome to the Docker Community on Discord</p>
+		</header>
+
+		<a href="https://discord.gg/U8ZEPhe" class="button" target="_blank">Join Discord Server</a>
+
+		<hr />
+
+		<section>
+			<h2>Statistics</h2>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+			<canvas id="myChart" width="400" height="100"></canvas>
+			<script>
+			var ctx = document.getElementById("myChart").getContext('2d');
+
+			var maxActiveUsers = {
+				'October 2018': 40,
+				'November 2018': 50,
+				'December 2018': 74,
+				'January 2019': 75,
+			}
+
+			var totalMembers = {
+				'June 2018': 2,
+				'October 2018': 114,
+				'January 2019': 251
+			}
+
+			var myChart = new Chart(ctx, {
+			    type: 'line',
+			    data: {
+			        labels: Object.keys(totalMembers),
+			        datasets: [{
+			            label: 'Total members',
+			            data: Object.values(totalMembers),
+			            backgroundColor: [
+			                'rgba(255, 200, 132, 0.3)',
+			            ],
+			            borderColor: [
+			                'rgba(255,99,132,1)',
+			            ],
+			            borderWidth: 1
+			        }]
+			    },
+			    options: {
+			        scales: {
+			            yAxes: [{
+			                ticks: {
+			                    beginAtZero: true
+			                }
+			            }]
+			        }
+			    }
+			});
+			</script>
+		</section>
+
+		<hr />
+
+		<section>
+		<h2>Recommended Articles</h2>
+			<h3>Getting Started</h3>
+			<ul class="center">
+				<li><a href="https://docs.docker.com/get-started/" target="_blank">Get Started</a></li>
+				<li><a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/" target="_blank">Best practices for writing Dockerfiles</a></li>
+			</ul>
+
+			<h3>Docker Compose</h3>
+			<ul class="center">
+				<li><a href="https://docs.docker.com/compose/gettingstarted/" target="_blank">Get started with Docker Compose</a></li>
+			</ul>
+		</section>
+
+		<hr />
+
+		<footer>
+			<a href="https://github.com/xy2z/docker-discord-web" target="_blank">GitHub</a>
+		</footer>
+	</body>
+
+</html>
