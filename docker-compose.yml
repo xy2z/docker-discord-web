@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  web:
+    image: nginx:1.15
+    restart: always
+    volumes:
+      - "./public:/usr/share/nginx/html"
+    labels:
+      - "traefik.frontend.rule=Host: docker.xy2z.io"
+      - "traefik.enable=true"
+      - "traefik.docker.network=web"
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
